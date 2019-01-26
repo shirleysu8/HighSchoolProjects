@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+//variables are exported to app component html to use 
 export class AppComponent {
-  title = 'my-app';
+  //title of website
+  title = 'Locate and Donate!';
+  
 }

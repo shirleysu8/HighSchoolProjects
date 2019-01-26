@@ -1,7 +1,8 @@
+//importing more angular components
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-
+//downloaded from angular, needed to test/check module
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({

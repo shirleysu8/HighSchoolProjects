@@ -1,0 +1,71 @@
+<h2>Donation Types</h2>
+<img src="{{selectDonate.image[0]}}" alt="Donation ITEMS" style="float:right;width:450px;height:300px;">
+<ul class="heroes">
+  <!-- loops through items and the donation type is chosen by click -->
+  <li *ngFor="let item of items"
+    [class.selected]="item === selectDonate"
+    (click)="onSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.name}}
+  </li> 
+</ul>
+<div *ngIf="selectDonate">
+  <h2>{{selectDonate.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectDonate.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectDonate.name" placeholder="name">
+    </label>
+  </div>
+  
+<!-- steps up the map's marker/info window: includes coordinates, website link, and donation name-->
+<agm-map [latitude] = "47" [longitude] = "-122">
+    <agm-marker *ngIf="latitude != null" [latitude]="latitude" [longitude]="longitude"> <agm-info-window> 
+       <a href={{selectDonate.websitelink[0]}}>{{selectDonate.donatename[0]}}</a>
+    </agm-info-window></agm-marker>
+    <agm-marker *ngIf="latitude1 != null" [latitude]="latitude1" [longitude]="longitude1"> <agm-info-window>
+      <a href={{selectDonate.websitelink[1]}}>{{selectDonate.donatename[1]}}</a>
+      
+    </agm-info-window></agm-marker>
+    <agm-marker *ngIf="latitude2 != null" [latitude]="latitude2" [longitude]="longitude2"> <agm-info-window>
+      
+      <a href={{selectDonate.websitelink[2]}}>{{selectDonate.donatename[2]}}</a>
+    </agm-info-window></agm-marker>
+    <agm-marker *ngIf="latitude3 != null" [latitude]="latitude3" [longitude]="longitude3"> <agm-info-window>
+      
+      <a href={{selectDonate.websitelink[3]}}>{{selectDonate.donatename[3]}}</a>
+    </agm-info-window></agm-marker>
+    <agm-marker *ngIf="latitude4 != null" [latitude]="latitude4" [longitude]="longitude4"> <agm-info-window>
+      
+        <a href={{selectDonate.websitelink[4]}}>{{selectDonate.donatename[4]}}</a>
+    </agm-info-window></agm-marker>
+    <agm-marker *ngIf="latitude5 != null" [latitude]="latitude5" [longitude]="longitude5"> <agm-info-window>
+      
+      <a href={{selectDonate.websitelink[5]}}>{{selectDonate.donatename[5]}}</a>
+    </agm-info-window></agm-marker>
+    <agm-marker *ngIf="latitude6 != null" [latitude]="latitude6" [longitude]="longitude6"> <agm-info-window>
+      
+      <a href={{selectDonate.websitelink[6]}}>{{selectDonate.donatename[6]}}</a>
+    </agm-info-window></agm-marker>
+    <agm-marker *ngIf="latitude7 != null" [latitude]="latitude7" [longitude]="longitude7"> <agm-info-window>
+      
+      <a href={{selectDonate.websitelink[7]}}>{{selectDonate.donatename[7]}}</a>
+    </agm-info-window></agm-marker>
+
+    <agm-marker *ngIf="latitude8 != null" [latitude]="latitude8" [longitude]="longitude8"> <agm-info-window> 
+      <a href={{selectDonate.websitelink[8]}}>{{selectDonate.donatename[8]}}</a>
+   </agm-info-window></agm-marker>
+   <agm-marker *ngIf="latitude9 != null" [latitude]="latitude9" [longitude]="longitude9"> <agm-info-window> 
+    <a href={{selectDonate.websitelink[9]}}>{{selectDonate.donatename[9]}}</a>
+ </agm-info-window></agm-marker>
+
+ <agm-marker *ngIf="latitude10 != null" [latitude]="latitude10" [longitude]="longitude10"> <agm-info-window> 
+  <a href={{selectDonate.websitelink[10]}}>{{selectDonate.donatename[10]}}</a>
+</agm-info-window></agm-marker>
+<agm-marker *ngIf="latitude11 != null" [latitude]="latitude11" [longitude]="longitude11"> <agm-info-window> 
+    <a href={{selectDonate.websitelink[11]}}>{{selectDonate.donatename[11]}}</a>
+  </agm-info-window></agm-marker>
+  </agm-map>
+ 
+
+
+
